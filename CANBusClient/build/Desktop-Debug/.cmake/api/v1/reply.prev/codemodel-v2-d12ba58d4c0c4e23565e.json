@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-21bdb526eb4489e135ce.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CANBusClient",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-4870f1f81a8e011ad694.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-d4b567c965b9e277bab7.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-d7f5ca14c378852d9f42.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-cd51c4940357797d3a24.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus-Debug-126dc864482c22d71f4e.json",
+					"name" : "appCANBus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_autogen-Debug-4e683ff6fc5d85f68ab7.json",
+					"name" : "appCANBus_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_autogen_timestamp_deps-Debug-55346f564d911ed1f39f.json",
+					"name" : "appCANBus_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_qmlimportscan-Debug-c5599e91190cfc9f9275.json",
+					"name" : "appCANBus_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_qmllint-Debug-c77a28c663d10679faf3.json",
+					"name" : "appCANBus_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_qmllint_json-Debug-63b4056be949a8f4a0cf.json",
+					"name" : "appCANBus_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_qmllint_module-Debug-877a673589c16eed84a1.json",
+					"name" : "appCANBus_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_qmltyperegistration-Debug-c9c6d53cb0a42a15001b.json",
+					"name" : "appCANBus_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appCANBus_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appCANBus_tooling-Debug-3f6478d3f35f1f5fc184.json",
+					"name" : "appCANBus_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/Work/CANBusClient/build/Desktop-Debug",
+		"source" : "/home/user/Work/CANBusClient"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

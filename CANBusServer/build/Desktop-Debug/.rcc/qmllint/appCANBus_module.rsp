@@ -1,0 +1,10 @@
+-I
+/home/user/Work/CANBusServer/build/Desktop-Debug
+-I
+/home/user/qt6/host/./qml
+--resource
+/home/user/Work/CANBusServer/build/Desktop-Debug/.rcc/qmake_CANBus.qrc
+--resource
+/home/user/Work/CANBusServer/build/Desktop-Debug/.rcc/appCANBus_raw_qml_0.qrc
+--module
+CANBus

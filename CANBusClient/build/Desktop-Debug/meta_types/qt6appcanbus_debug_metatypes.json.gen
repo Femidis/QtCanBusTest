@@ -1,0 +1,71 @@
+[
+    {
+        "classes": [
+            {
+                "className": "CanInterfaceClient",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "dynamicText",
+                        "notify": "dynamicTextChanged",
+                        "read": "dynamicText",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "CanInterfaceClient",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "dynamicTextChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "text",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "handleText",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "receiveFrames",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "newText",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "updateText",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "caninterfaceclient.h",
+        "outputRevision": 68
+    }
+]

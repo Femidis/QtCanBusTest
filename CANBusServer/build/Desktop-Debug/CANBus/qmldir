@@ -1,0 +1,5 @@
+module CANBus
+typeinfo appCANBus.qmltypes
+prefer :/qt/qml/CANBus/
+Main 1.0 Main.qml
+

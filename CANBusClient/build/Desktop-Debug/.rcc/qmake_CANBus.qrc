@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/CANBus">
+    <file alias="qmldir">/home/user/Work/CANBusClient/build/Desktop-Debug/CANBus/qmldir</file>
+  </qresource>
+</RCC>
+
