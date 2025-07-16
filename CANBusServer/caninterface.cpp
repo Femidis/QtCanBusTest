@@ -50,7 +50,21 @@ bool CanInterface::SendFrame(QByteArray data){
 
     qDebug() << "canFdSupported" << canFdSupported;
 
-    QCanBusFrame frame(id, data);
+    QByteArray payload = data;
+
+    int align_byte = data.size();
+
+
+    qDebug() << "size of data" <<  (align_byte % 4);
+
+    align_byte = (align_byte>8) * (align_byte % 4);
+
+    payload.append(QByteArray(align_byte, 0));
+
+
+    qDebug() << "size of payload" << payload.size();
+
+    QCanBusFrame frame(id, payload);
 
     frame.setFlexibleDataRateFormat(true);
 
