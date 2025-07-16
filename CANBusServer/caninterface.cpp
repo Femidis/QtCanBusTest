@@ -1,4 +1,5 @@
 #include "caninterface.h"
+#include <cmath>
 
 CanInterface::CanInterface(const char* devName) {
 
@@ -52,14 +53,9 @@ bool CanInterface::SendFrame(QByteArray data){
 
     QByteArray payload = data;
 
-    int align_byte = data.size();
+    const int alignedSize = std::ceil(data.size() / 4.0) * 4;
 
-
-    qDebug() << "size of data" <<  (align_byte % 4);
-
-    align_byte = (align_byte>8) * (align_byte % 4);
-
-    payload.append(QByteArray(align_byte, 0));
+    payload.append(QByteArray(alignedSize-data.size(), 0));
 
 
     qDebug() << "size of payload" << payload.size();
