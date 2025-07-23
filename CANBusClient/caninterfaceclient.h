@@ -5,37 +5,58 @@
 #include <QCanBus>
 #include <QGuiApplication>
 
+
+class targetObject
+{
+
+public:
+    int cls;
+    int prb;
+    int x,y,w,h;
+
+    targetObject() = default;
+
+    targetObject(const int& cls, const int& prb, const int& x, const int& y, const int& w, const int& h)
+        : cls(cls), prb(prb), x(x), y(y), w(w), h(h)
+    {
+    }
+
+    void print();
+};
+
+
+
 class CanInterfaceClient : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString dynamicText READ dynamicText NOTIFY dynamicTextChanged)
 
 public:
     CanInterfaceClient(const char*);
     ~CanInterfaceClient();
 
-    QString dynamicText() const;
 
-    QCanBusDevice *device; // перенести в приват
+
 
 
 public slots:
-    void handleText(const QString &text);
+
+    void handleText(const QString& text);
+    void sendCommand(const uint8_t& comm_index);
     void receiveFrames();
-    void updateText(const QString &newText);
+    // void updateText(const QString &newText);
 
 signals:
-    void dynamicTextChanged();
+
+    void activeTargetsChanged(QVector<targetObject>);
 
 private:
+
     // attrs
-    QString m_dynamicText;
+    QCanBusDevice *device;
 
     // methods
     bool SendFrame(QByteArray);
-
-
-
+    bool reciveMessage(const QByteArray &data);
 };
 
 #endif // CANINTERFACE_H

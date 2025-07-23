@@ -18,6 +18,7 @@ qt_add_qml_module(appCANBus
     QML_FILES
         Main.qml
         SOURCES caninterfaceclient.h caninterfaceclient.cpp
+        SOURCES targetsmodel.h targetsmodel.cpp
 
 )
 

@@ -15,3 +15,19 @@
 	```bash
 	sudo apt install can-utils net-tools
 	```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Скорость от расстояния CAN  
+$ y=20090.6644\cdot x^{-0.806092} $

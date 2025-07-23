@@ -19,5 +19,6 @@ ip link show vcan0
 ip link show vcan1 
 
 sudo cangw -A -s vcan0 -d vcan1 -e
+sudo cangw -A -s vcan1 -d vcan0 -e
 
 sudo cangw -L

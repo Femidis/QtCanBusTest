@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "caninterface.h"
+#include "integrationmodule.h"
 
 
 int main(int argc, char *argv[])
@@ -10,8 +11,17 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     CanInterface server = CanInterface("vcan0");
+    IntegrationModule *integrModule = new IntegrationModule(&app);
+
     engine.rootContext()->setContextProperty("CanInterface", &server);
 
+    qmlRegisterSingletonInstance("App.Core", 1, 0, "IntegrationModule", integrModule);
+
+    QObject::connect(
+        &server,
+        &CanInterface::chainSendCommand,
+        integrModule,
+        &IntegrationModule::recieveCommand);
 
     QObject::connect(
         &engine,
@@ -22,11 +32,6 @@ int main(int argc, char *argv[])
 
 
     engine.loadFromModule("CANBus", "Main");
-
-
-
-
-
 
     return app.exec();
 }
