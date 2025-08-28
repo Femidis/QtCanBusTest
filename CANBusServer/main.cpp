@@ -1,25 +1,42 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include "caninterface.h"
+#include <QFile>
+
+
+#include "canIServer.h"
 #include "integrationmodule.h"
+#include "customlogger.h"
+
+
 
 
 int main(int argc, char *argv[])
 {
+    QString logFileName = "server";
+
+    QFile::remove(logFileName+"_log.txt");
+
+    CustomLogger::setLogFile(logFileName + "_log.txt");
+
+
+    qInstallMessageHandler(CustomLogger::messageHandler);
+
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    CanInterface server = CanInterface("vcan0");
+
+
+    CanIServer server = CanIServer("vcan0");
     IntegrationModule *integrModule = new IntegrationModule(&app);
 
-    engine.rootContext()->setContextProperty("CanInterface", &server);
-
     qmlRegisterSingletonInstance("App.Core", 1, 0, "IntegrationModule", integrModule);
+    qmlRegisterSingletonInstance("App.Core", 1, 0, "CanInterface", &server);
+
 
     QObject::connect(
         &server,
-        &CanInterface::chainSendCommand,
+        &CanIServer::chainSendCommand,
         integrModule,
         &IntegrationModule::recieveCommand);
 

@@ -15,9 +15,8 @@ IntegrationModule::IntegrationModule(QObject* parent) : QObject(parent) {
 void IntegrationModule::recieveCommand(int commandIndex)
 {
 
-    qDebug() << "recieved Command" << commandIndex;
     mode_ = static_cast<Mode>(commandIndex);
-    qDebug() << "recieved Mode" << mode_;
+    qDebug() << "Change Mode to" << mode_;
     emit modeChanged();
 
 }

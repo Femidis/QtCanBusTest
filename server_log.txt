@@ -1,0 +1,61 @@
+[2025-07-28 13:05:39.829] INFO: CAN device successfully connected From CanInterface
+[2025-07-28 13:05:44.875] DEBUG: Recieved frame with id: 1 at time "1753697144.8744  "
+[2025-07-28 13:05:44.875] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 2
+[2025-07-28 13:05:44.875] DEBUG: Change Mode to IntegrationModule::Mode(2)
+[2025-07-28 13:05:45.722] DEBUG: Recieved frame with id: 1 at time "1753697145.7221  "
+[2025-07-28 13:05:45.722] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 1
+[2025-07-28 13:05:45.723] DEBUG: Change Mode to IntegrationModule::Mode::BOEVOI
+[2025-07-28 13:05:47.066] DEBUG: Send Frame ID: 2 Data: "321cb0d4622905"
+[2025-07-28 13:07:57.496] DEBUG: Recieved frame with id: 1 at time "1753697277.4960  "
+[2025-07-28 13:07:57.496] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 0
+[2025-07-28 13:07:57.497] DEBUG: Change Mode to IntegrationModule::Mode::DEZ
+[2025-07-28 13:07:57.856] DEBUG: Recieved frame with id: 1 at time "1753697277.8556  "
+[2025-07-28 13:07:57.856] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 1
+[2025-07-28 13:07:57.856] DEBUG: Change Mode to IntegrationModule::Mode::BOEVOI
+[2025-07-28 13:07:58.472] DEBUG: Recieved frame with id: 1 at time "1753697278.4716  "
+[2025-07-28 13:07:58.472] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 0
+[2025-07-28 13:07:58.472] DEBUG: Change Mode to IntegrationModule::Mode::DEZ
+[2025-07-28 13:07:59.265] DEBUG: Send Frame ID: 2 Data: "769cf1345d2809"
+[2025-07-28 13:07:59.873] DEBUG: Send Frame ID: 2 Data: "88a271b43a0e34"
+[2025-07-28 13:08:00.769] DEBUG: Send Frame ID: 2 Data: "0f9db1c0674249"
+[2025-07-28 13:08:02.880] DEBUG: Recieved frame with id: 1 at time "1753697282.8803  "
+[2025-07-28 13:08:02.881] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 0
+[2025-07-28 13:08:02.881] DEBUG: Change Mode to IntegrationModule::Mode::DEZ
+[2025-07-28 13:08:03.240] DEBUG: Recieved frame with id: 1 at time "1753697283.2398  "
+[2025-07-28 13:08:03.240] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 1
+[2025-07-28 13:08:03.240] DEBUG: Change Mode to IntegrationModule::Mode::BOEVOI
+[2025-07-28 13:08:03.664] DEBUG: Recieved frame with id: 1 at time "1753697283.6639  "
+[2025-07-28 13:08:03.664] DEBUG: Recieved message 
+ From: 0 
+ To: 1 
+ Message type: command 
+ Command: 0
+[2025-07-28 13:08:03.664] DEBUG: Change Mode to IntegrationModule::Mode::DEZ

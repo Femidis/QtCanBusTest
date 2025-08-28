@@ -2,7 +2,7 @@
 #define TARGETSMODEL_H
 
 #include <QAbstractListModel>
-#include "caninterfaceclient.h"
+#include "canIClient.h"
 
 class TargetsModel : public QAbstractListModel
 {

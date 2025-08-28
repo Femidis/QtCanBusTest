@@ -3,8 +3,8 @@ import QtQuick.Controls
 import App.Core 1.0
 
 Window {
-    width: 640
-    height: 580
+    width: 680
+    height: 865
     visible: true
     title: qsTr("Target Generator")
 
@@ -19,8 +19,9 @@ Window {
         // Блок для отображения последней цели
         Rectangle {
             id: targetDisplay
-            width: parent.width - 20
-            height: 300
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: 640
+            height: 640
             color: "#f0f0f0"
             border.color: "gray"
             border.width: 1

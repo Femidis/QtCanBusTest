@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import App.Core 1.0
 
 Window {
     id: root
@@ -11,49 +12,77 @@ Window {
     title: qsTr("Target Detection System")
     color: "#f0f0f0"
 
-    // Заголовок окна
-    Rectangle {
-        id: titleBar
-        anchors.top: parent.top
-        width: parent.width
-        height: 30
-        color: "#333333"
+    ToolBar {
+            id: titleBar
+            position: ToolBar.Header // или ToolBar.Footer для нижней панели
 
-        Text {
-            text: root.title
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-            anchors.verticalCenter: parent.verticalCenter
-            color: "white"
-            font.pixelSize: 12
-        }
+            Row {
+                anchors.fill: parent
+                spacing: 5
 
-        // Кнопки управления окном
-        Row {
-            anchors.right: parent.right
-            anchors.rightMargin: 5
-            anchors.verticalCenter: parent.verticalCenter
-            spacing: 5
+                ToolButton {
+                    text: "Файл"
+                    onClicked: console.log("Файл clicked")
+                }
 
-            Button {
-                width: 20
-                height: 20
-                text: "—"
-                font.pixelSize: 12
-                background: Rectangle { color: "transparent" }
-                onClicked: root.visibility = Window.Minimized
+                ToolButton {
+                    text: "Правка"
+                    onClicked: console.log("Правка clicked")
+                }
+
+                ToolButton {
+                    text: "Вид"
+                    onClicked: console.log("Вид clicked")
+                }
             }
-
-            Button {
-                width: 20
-                height: 20
-                text: "✕"
-                font.pixelSize: 10
-                background: Rectangle { color: "transparent" }
-                onClicked: Qt.quit()
-            }
-        }
     }
+
+
+
+
+    // // Заголовок окна
+    // Rectangle {
+    //     id: titleBar
+    //     anchors.top: parent.top
+    //     width: parent.width
+    //     height: 30
+    //     color: "#333333"
+
+    //     Text {
+    //         text: root.title
+    //         anchors.left: parent.left
+    //         anchors.leftMargin: 10
+    //         anchors.verticalCenter: parent.verticalCenter
+    //         color: "white"
+    //         font.pixelSize: 12
+    //     }
+
+    //     // Кнопки управления окном
+    //     Row {
+    //         anchors.right: parent.right
+    //         anchors.rightMargin: 5
+    //         anchors.verticalCenter: parent.verticalCenter
+    //         spacing: 5
+
+    //         Button {
+    //             width: 20
+    //             height: 20
+    //             text: "—"
+    //             font.pixelSize: 12
+    //             background: Rectangle { color: "transparent" }
+    //             onClicked: root.visibility = Window.Minimized
+    //         }
+
+    //         Button {
+    //             width: 20
+    //             height: 20
+    //             text: "✕"
+    //             font.pixelSize: 10
+    //             background: Rectangle { color: "transparent" }
+    //             onClicked: Qt.quit()
+    //         }
+    //     }
+    // }
 
     // Основной контент - разделён на две области
     Rectangle {
@@ -303,7 +332,7 @@ Window {
 
                         // ID цели
                         Text {
-                            text: model.id
+                            text: index
                             width: 50
                             anchors.verticalCenter: parent.verticalCenter
                             font.pixelSize: 12
@@ -395,15 +424,15 @@ Window {
 
                 Button {
                     text: "Режим 1"
-                    onClicked: CanInterfaceClient.sendCommand(0)
+                    onClicked: CanInterface.sendCommand(0)
                 }
                 Button {
                     text: "Режим 2"
-                    onClicked: CanInterfaceClient.sendCommand(1)
+                    onClicked: CanInterface.sendCommand(1)
                 }
                 Button {
                     text: "Режим 3"
-                    onClicked: CanInterfaceClient.sendCommand(2)
+                    onClicked: CanInterface.sendCommand(2)
                 }
 
             }
